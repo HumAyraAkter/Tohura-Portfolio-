@@ -1,0 +1,2472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+   background: linear-gradient(rgba(11, 9, 20, 0.295), rgba(11, 9, 20, 0.301)), 
+                url('download (7).jpg') no-repeat center center/cover fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  
+}
+
+/* নেভিগেশন বার স্টাইল */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 14px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 1;
+}
+
+/* আপনার আগের CSS কোড এখানে থাকবে... */
+
+/* মোবাইলের জন্য রেসপন্সিভ স্টাইল (৩৭৫ পিক্সেল ও তার নিচে) */
+@media screen and (max-width: 425px) {
+    /* হ্যামবার্গার এবং ক্রস বাটনের ডিফল্ট স্টাইল রিমুভ */
+    .menu-toggle, .menu-close {
+        display: block;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+    }
+
+    /* ক্রস বাটনটি মেনুর ভেতরে ডানদিকে রাখার জন্য */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 35px;
+        opacity: 0.8;
+    }
+
+    /* ডেক্সটপ মেনুকে মোবাইল সাইডবারে রূপান্তর */
+    .navbar nav {
+        position: fixed;
+        top: 0;
+        left: -100%; /* শুরুতে স্ক্রিনের বামে লুকিয়ে থাকবে */
+        width: 250px; /* সাইডবারের চওড়া */
+        height: 100vh;
+        background-color: #11111100; /* আপনার থিম অনুযায়ী ব্যাকগ্রাউন্ড কালার পরিবর্তন করতে পারেন */
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        z-index: 999;
+        transition: left 0.4s ease; /* বাম থেকে স্লাইড হওয়ার অ্যানিমেশন */
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* জাভাস্ক্রিপ্ট দিয়ে এই ক্লাসটি যুক্ত হলে মেনু স্লাইড হয়ে দেখাবে */
+    .navbar nav.active {
+        left: 0;
+    }
+
+    /* মোবাইল মেনুর ভেতরের লিংকগুলোর স্টাইল */
+    .navbar nav a {
+    margin: 15px 0 15px 30px;
+    font-size: 18px;
+    display: block;
+    opacity: 0.7; /* শুরুতে কিছুটা হালকা থাকবে */
+    color: #ffffff;
+    text-decoration: none;
+     opacity: 1;
+    color: #ffffff;
+    /* সাদা স্পটলাইট গ্লো তৈরি করার মূল ট্রিক */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.5), 
+                 0 0 30px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out; /* অ্যানিমেশন স্মুথ করার জন্য */
+}
+
+/* স্পটলাইট বা শাইনি গ্লো ইফেক্ট */
+.navbar nav a:hover {
+   
+}
+
+}
+
+/* ডেক্সটপ স্ক্রিনে মেনু বাটনগুলো লুকিয়ে রাখার জন্য */
+@media screen and (min-width: 426px) {
+    .menu-toggle, .menu-close {
+        display: none;
+    }
+}
+
+
+/* 🖼️ হিরো সেকশন - আপনার দেওয়া ইমেজটি এখানে সেট করা হয়েছে */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    /* আপনার ইমেজের ফাইল নেম হুবহু এখানে বসানো হয়েছে */
+  background: url('back ground img download (2).jpg') no-repeat center center/cover; 
+    position: relative;
+}
+
+
+
+/* টেক্সট এলাইনমেন্ট ও ফন্ট সাইজ */
+
+.hero-text {
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* 'Scalable' লেখার বিশেষ বোল্ড স্টাইল */
+/* 'Scalable' এবং অন্যান্য লেখার বিশেষ স্টাইল */
+.scalable-text {
+    font-size: 76px;
+    font-weight: 800;
+    color: #bb9af7;
+    display: block;
+    margin-top: 5px;
+    letter-spacing: -1px;
+    text-shadow: 0 0 20px rgba(187, 154, 247, 0.5);
+    
+    /* অ্যানিমেশন ট্রানজিশন আরও স্মুথ ও ধীর গতির করা হলো (0.5s) */
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s ease,
+                text-shadow 0.5s ease;
+}
+
+/* টেক্সটটি যখন আলতো করে উপরে উঠে মিলিয়ে যাবে */
+.scalable-text.fade-out {
+    opacity: 0;
+    transform: translateY(-15px); /* সামান্য বেশি উপরে উঠবে */
+    filter: blur(8px);            /* চমৎকার সিনেমাটিক ব্লার */
+}
+
+/* টেক্সটটি যখন নিচ থেকে আলতো করে ভেসে উঠবে */
+.scalable-text.fade-in {
+    opacity: 0;
+    transform: translateY(15px);  /* নিচ থেকে শুরু হবে */
+    filter: blur(8px);
+}
+
+
+.hero-text p {
+    font-size: 24px;
+    color: #ffffff;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* ডান পাশের ইমেজ এরিয়া */
+.hero-image-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+/* 🚀 অ্যাস্ট্রোনট অ্যানিমেশন */
+.astronaut {
+    width: 90%;
+    max-width: 520px;
+    position: absolute;
+    transform-origin: center;
+    
+    /* অ্যানিমেশন ট্র্রিগার: প্রথমে উপর থেকে পড়বে, তারপর ভাসবে */
+    animation: 
+        fallIn 2.5s cubic-bezier(0.1, 1, 0.1, 1) forwards, 
+        floatAnimation 5s ease-in-out infinite 2.5s;
+}
+
+/* ১. উপর থেকে নিচে নামার ইফেক্ট */
+@keyframes fallIn {
+    0% {
+        transform: translateY(-100vh) rotate(-15deg) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(4deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* 📱 ট্যাবলেট রেসপনসিভ ডিজাইন (৭৬৮px থেকে ১০২৪px স্ক্রিনের জন্য) */
+@media (max-width: 1024px) {
+    .navbar { 
+        padding: 20px 5%; 
+    }
+    .hero-section { 
+        flex-direction: column; 
+        justify-content: center; 
+        padding: 80px 5% 40px 5%; 
+        text-align: center;
+        height: auto; /* কন্টেন্ট অনুযায়ী হাইট অ্যাডজাস্ট হবে */
+        min-height: 100vh;
+    }
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .hero-text h1 { 
+        font-size: 42px; 
+    }
+    .scalable-text { 
+        font-size: 64px; 
+    }
+    .hero-image-container { 
+        width: 100%; 
+        height: 40vh; 
+    }
+    .astronaut { 
+        width: 60%; 
+        max-width: 350px;
+    }
+}
+
+/* 📱 মোবাইল রেসপনসিভ ডিজাইন (৭৬৮px এর নিচের স্ক্রিনের জন্য) */
+@media (max-width: 768px) {
+    .navbar { padding: 20px 5%; }
+    .hero-section { flex-direction: column; justify-content: center; padding: 100px 5% 0 5%; text-align: center; height: auto; min-height: 100vh; margin-bottom: 30px; }
+    .hero-text h1 { font-size: 25px; }
+    .scalable-text { font-size: 40px; }
+    .hero-image-container { width: 100%; height: 50vh; margin-top: 0px; }
+    .astronaut { width: 70%; }
+    .hero-text h3 {
+      font-size: 25px;
+    }
+}
+@media (max-width: 425px) {
+   .hero-text {
+    margin-bottom: 10px;
+   }
+   .hero-section {
+    margin-bottom: 0px;
+   }
+}
+    
+/* বেন্টো গ্রিড মূল স্টাইল */
+/* বেন্টো গ্রিড মূল স্টাইল */
+.about-bento-section {
+    padding: 60px 10%;
+    background-color: #0b0c10; /* আপনার ব্যাকগ্রাউন্ড কালারের সাথে ম্যাচ করিয়ে নেবেন */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-auto-flow: row;
+}
+/* কমন কার্ড স্টাইল */
+.bento-item {
+    background: rgba(25, 28, 41, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* ১. কোডিং কার্ড */
+.item-code {
+  grid-column: span 6;
+  grid-row: span 2;
+  background: linear-gradient(145deg, rgba(25, 28, 41, 0.637), rgba(15, 16, 26, 0.699)),url('s.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.code-header {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 6px;
+}
+.text-intro {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.text-desc {
+    font-size: 0.95rem;
+    color: #f3f4f7;
+    line-height: 1.5;
+}
+
+/* ২. ডিজাইন প্রিন্সিপাল কার্ড */
+.item-principles {
+  grid-column: span 6;
+  background: #574b68c4;
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+}
+
+/* ব্যাজ স্টাইল */
+.badge {
+    background: linear-gradient(135deg, rgba(27, 8, 8, 0.349), rgba(31, 15, 15, 0.356));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    cursor: grab;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    position: absolute; /* জাভাস্ক্রিপ্ট দিয়ে পজিশন কন্ট্রোল করার জন্য */
+    will-change: transform, left, top;
+}
+
+.badge:active {
+    cursor: grabbing;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ওয়াটারমার্ক */
+.bg-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem; /* সাইজ ছোট করা হয়েছে ঠিক ইমেজের মতো */
+    color: #ffffff;
+    opacity: 0.4; /* অপাসিটি কিছুটা বাড়িয়ে লেখাটি একটু স্পষ্ট ও গাঢ় করা হয়েছে */
+    font-weight: 700; /* ফন্ট কিছুটা মিডিয়াম-বোল্ড করা হয়েছে */
+    letter-spacing: 2px; /* অক্ষরের মাঝখানের স্পেস ইমেজের মতো দেখাবে */
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+    text-transform: uppercase; /* লেখাটি অল-ক্যাপস বা বড় হাতের হবে */
+}
+.draggable-badge {
+    touch-action: none;       /* মোবাইলের ডিফল্ট পেজ স্ক্রল লক করবে ড্র্যাগ করার সময় */
+    user-select: none;         /* টেক্সট সিলেকশন বন্ধ করবে */
+    -webkit-user-select: none; /* সাফারি ব্রাউজারের জন্য সিলেকশন বন্ধ করবে */
+}
+
+
+/* ৩. টাইম জোন কার্ড মূল কন্টেইনার */
+.item-timezone {
+  grid-column: span 6;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #131625, #1f2438);
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.item-timezone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 1;
+}
+
+.timezone-text {
+  position: relative;
+  z-index: 3;
+}
+
+.timezone-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.timezone-text p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.82);
+  max-width: 250px;
+}
+
+.globe-wrap {
+  position: absolute;
+  right: -58px;
+  bottom: -58px;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.globe-image {
+  position: absolute;
+  right: -52px;
+  bottom: -91px;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgb(221 221 221 / 88%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.432) 0%, rgba(255, 255, 255, 0.219) 45%, transparent 70%);
+  box-shadow:
+    0 0 18px rgba(255,255,255,0.35),
+    0 0 40px rgba(255,255,255,0.18),
+    inset 0 0 18px rgba(255,255,255,0.22);
+  animation: globeSpin 25s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes globeSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+/* ৪. ইমেজের মতো রিয়ালিস্টিক শ্যাডো ইফেক্ট */
+.globe-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* একপাশে আলো এবং অন্যপাশে অন্ধকার তৈরি করার জন্য */
+  background: radial-gradient(circle at 30% 30%, transparent 40%, rgba(0,0,0,0.7) 90%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ফিক্সড জায়গায় ৩ডি ঘূর্ণনের কীফ্রেম */
+@keyframes spin-3d {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0); /* ম্যাপটি নিজের অক্ষের ভেতরেই নিখুঁতভাবে লুপ হবে */
+  }
+}
+
+
+
+/* ৪. কন্ট্যাক্ট (পার্পল) কার্ড */
+.item-cta {
+  grid-column: span 5;
+  background: linear-gradient(to right, #131625, #1f2438);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.item-cta h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.copy-btn {
+    background: #464970;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.copy-btn:hover {
+    background: #513d64;
+}
+
+/* ৫. টেক স্ট্যাক কার্ড */
+/* টেক স্ট্যাক কন্টেইনার */
+.item-techstack {
+  grid-column: span 7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, hsla(284, 38%, 15%, 0.822), #330747d8);
+  position: relative;
+  overflow: hidden; /* ভেতরের বড় বৃত্তের বাড়তি অংশ লুকানোর জন্য */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px;
+  height: 220px;
+}
+
+.techstack-text {
+  position: relative;
+  z-index: 4;
+}
+.techstack-text h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.techstack-text p {
+  font-size: 0.9rem;
+  color: #e2e6ec;
+  max-width: 250px;
+  line-height: 1.4;
+}
+
+/* কক্ষপথ ফ্রেম (আপনার ইমেজের মতো ডানে বিশাল বৃত্তের জন্য পজিশন) */
+.orbit-wrapper {
+  position: absolute;
+      right: -350px;
+    top: -21%;
+  transform: translateY(-50%);
+  width: 550px;  /* ইমেজের মতো বিশাল বড় ব্যাসার্ধের বৃত্ত */
+  height: 550px;
+  z-index: 2;
+}
+
+/* মূল ঘূর্ণায়মান বৃত্তরেখা */
+.orbit-circle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08); /* ইমেজের মতো সরু বৃত্তাকার লাইন */
+  
+  /* পুরো রিংটি এক জায়গায় ফিক্সড থেকে অনবরত ঘুরবে */
+  animation: spin-orbit 35s linear infinite; 
+}
+
+/* আইকনগুলোর ডিজাইন এবং কাছাকাছি আনার পজিশন */
+.orbit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46px; 
+  height: 46px;
+  margin: -23px; 
+  background: #111424; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* ইমেজের মতো সামান্য স্কয়ার/রাউন্ডেড কর্নার বক্স */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  
+  /* 
+    ৮টি আইকনকে বিশাল বৃত্তের পরিধিতে (৫৫০px / ২ = ২৭৫px ব্যাসার্ধে) ঘন করে সাজানোর ফর্মুলা।
+    ৩৬০ / ৮ = ৪৫ ডিগ্রি পর পর বসার কারণে এরা খুব কাছাকাছি থাকবে।
+  */
+  transform: rotate(calc(var(--icon-index) * 45deg)) translate(275px) rotate(calc(var(--icon-index) * -45deg));
+  
+  /* রিং ঘোরার সময় আইকনগুলো যেন সোজা থাকে */
+  animation: keep-upright 35s linear infinite;
+}
+
+.orbit-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* --- অ্যানিমেশন কীফ্রেম --- */
+
+/* মূল কক্ষপথ ঘোরার অ্যানিমেশন */
+@keyframes spin-orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* আইকনগুলো যেন সোজা খাড়া থাকে (Counter-rotate) */
+@keyframes keep-upright {
+  0% {
+    transform: rotate(calc(var(--icon-index) * 45deg)) translate(275px) rotate(calc(var(--icon-index) * -45deg - 0deg));
+  }
+  100% {
+    transform: rotate(calc(var(--icon-index) * 45deg)) translate(275px) rotate(calc(var(--icon-index) * -45deg - 360deg));
+  }
+}
+/* ===== মোবাইল রেসপন্সিভ (435px, 375px, 320px) ===== */
+
+/* 435px এবং নিচে (সব মোবাইল) */
+@media (max-width: 435px) {
+  .bento-container {
+    grid-template-columns: 1fr; /* সিঙ্গেল কলাম */
+    grid-auto-rows: auto;
+    gap: 16px;
+    padding: 0 10px;
+  }
+
+  /* all cards full width */
+  .bento-item,
+  .item-code,
+  .item-principles,
+  .item-timezone,
+  .item-cta {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    min-height: auto;
+    padding: 20px;
+    height: 150px;
+  }
+ .item-techstack {
+     grid-column: span 1 !important;
+    grid-row: auto !important;
+    min-height: auto;
+    padding: 20px;
+    height: 200px;
+ }
+  /* code card: image height adjust */
+  .item-code {
+    min-height: 280px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-intro {
+    font-size: 1.2rem;
+  }
+
+  .text-desc {
+    font-size: 0.9rem;
+  }
+
+  /* timezone card: vertical layout */
+  .item-timezone {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .globe-wrap {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 180px;
+    height: 180px;
+    margin-top: 16px;
+  }
+
+  .globe-image {
+    right: auto;
+    bottom: auto;
+    width: 180px;
+    height: 180px;
+            top: 69px;
+        right: -25px;
+  }
+
+  .timezone-text p {
+    max-width: 100%;
+  }
+
+  /* cta card: full width button */
+  .item-cta {
+    align-items: flex-start;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+
+  /* techstack: vertical layout, smaller orbit */
+  
+}
+
+/* 375px এবং নিচে (ছোট মোবাইল) */
+@media (max-width: 375px) {
+  .about-bento-section {
+    padding: 40px 5%;
+  }
+
+  .text-intro {
+    font-size: 1.1rem;
+  }
+
+  .text-desc {
+    font-size: 0.85rem;
+  }
+
+  .item-code {
+    min-height: 260px;
+  }
+
+  .globe-wrap,
+  .globe-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .orbit-wrapper {
+    width: 524px;
+    height: 520px;
+    right: -392px;
+    top: -235%;
+    transform: translateY(34%);
+  }
+
+  .orbit-icon {
+    width: 34px;
+    height: 34px;
+    margin: -17px;
+  }
+
+  .orbit-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 320px এবং নিচে (খুব ছোট মোবাইল) */
+@media (max-width: 320px) {
+  .about-bento-section {
+    padding: 30px 4%;
+  }
+
+  .bento-item {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .text-intro {
+    font-size: 1rem;
+  }
+
+  .text-desc {
+    font-size: 0.8rem;
+  }
+
+  .item-code {
+    min-height: 240px;
+  }
+
+  .timezone-text h3 {
+    font-size: 1.05rem;
+  }
+
+  .timezone-text p {
+    font-size: 0.85rem;
+  }
+
+  .globe-wrap,
+  .globe-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .techstack-text h3 {
+    font-size: 1rem;
+  }
+
+  .techstack-text p {
+    font-size: 0.8rem;
+  }
+
+  .orbit-wrapper {
+    width: 540px;
+    height: 540px;
+    right: -383px;
+        top: -235%;
+  }
+
+  .orbit-icon {
+    width: 30px;
+    height: 30px;
+    margin: -15px;
+  }
+
+  .orbit-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .copy-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+/* প্রজেক্ট সেকশন লেআউট */
+.projects-section {
+  background-color: #0b0f1ee8;; /* ইমেজের মতো ডার্ক ব্যাকগ্রাউন্ড */
+  color: #ffffff;
+  padding: 80px 10%;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* প্রতিটি প্রজেক্ট লাইনের ডিজাইন */
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(131, 106, 151, 0.226); /* সরু ডিভাইডার লাইন */
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+/* হোভার করলে বাকি লাইনগুলো একটু আবছা দেখাবে */
+.projects-list:hover .project-row {
+  opacity: 0.3;
+}
+.projects-list .project-row:hover {
+  opacity: 1;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.tech-stack {
+  font-size: 0.85rem;
+  color: #8a7f94; /* ইমেজের মতো গ্রে টেক্সট */
+  word-spacing: 4px;
+}
+
+.read-more {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s;
+}
+
+.project-row:hover .read-more {
+  gap: 15px; /* হোভার করলে তীর চিহ্নটি ডানে সরবে */
+}
+
+/* ফ্লোটিং প্রিভিউ ইমেজ বক্সের ডিজাইন */
+.project-preview-box {
+  position: fixed; /* স্ক্রিনের সাপেক্ষে মুভ করার জন্য */
+  width: 280px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  pointer-events: none; /* মাউস ক্লিক যেন আটকে না যায় */
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.project-preview-box.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* =======================================
+   নতুন মোডাল (পপআপ উইন্ডো) স্টাইলিং 
+========================================== */
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* মোডাল একটিভ হলে */
+.project-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ব্যাকগ্রাউন্ড ব্লার ইফেক্ট */
+.modal-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 7, 16, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+/* মূল কার্ডের ইমেজের মতো ডিজাইন */
+.modal-content {
+  position: relative;
+  background: #0f1222;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 90%;
+  max-width: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  transform: translateY(40px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1001;
+}
+
+.project-modal.open .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+/* ক্লোজ বাটন (X) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* মোডাল ইমেজ উইন্ডো */
+.modal-img-wrapper {
+  width: 100%;
+  height: 280px;
+  background: #161a30;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modal-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* মোডাল টেক্সট বডি */
+.modal-body {
+  padding: 30px;
+}
+
+.modal-body h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.modal-body p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ফুটার সেকশন */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+}
+
+.modal-tech {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ভিউ প্রজেক্ট লিঙ্ক বাটন */
+.view-project-btn {
+  color: #38bdf8; /* স্কাই ব্লু টেক্সট */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.view-project-btn:hover {
+  color: #7dd3fc;
+}
+/* ===== মোবাইল রেসপন্সিভ (435px, 375px, 320px) ===== */
+
+/* 435px এবং নিচে (সব মোবাইল) */
+@media (max-width: 435px) {
+  .projects-section {
+    padding: 60px 5%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+
+  .project-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 0;
+    gap: 15px;
+  }
+
+  .project-info {
+    width: 100%;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .tech-stack {
+    font-size: 0.8rem;
+    word-spacing: 3px;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  /* ফ্লোটিং প্রিভিউ মোবাইলে হাইড করুন (UX ভালোর জন্য) */
+  .project-preview-box {
+    display: none;
+  }
+
+  /* মোডাল রেসপন্সিভ */
+  .modal-content {
+    width: 92%;
+    max-width: 400px;
+    border-radius: 16px;
+  }
+
+  .modal-img-wrapper {
+    height: 220px;
+  }
+
+  .modal-body {
+    padding: 24px;
+  }
+
+  .modal-body h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .modal-body p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 16px;
+  }
+
+  .modal-tech {
+    font-size: 0.8rem;
+  }
+
+  .view-project-btn {
+    font-size: 0.9rem;
+  }
+
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+    top: 12px;
+    right: 12px;
+  }
+  
+}
+
+/* 375px এবং নিচে (ছোট মোবাইল) */
+@media (max-width: 375px) {
+  .projects-section {
+    padding: 50px 4%;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+    margin-bottom: 30px;
+  }
+
+  .project-row {
+    padding: 20px 0;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .tech-stack {
+    font-size: 0.75rem;
+  }
+
+  .read-more {
+    font-size: 0.85rem;
+  }
+
+  .modal-content {
+    width: 94%;
+    max-width: 340px;
+    border-radius: 14px;
+  }
+
+  .modal-img-wrapper {
+    height: 200px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .modal-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .modal-body p {
+    font-size: 0.85rem;
+  }
+
+  .modal-tech {
+    font-size: 0.75rem;
+  }
+
+  .view-project-btn {
+    font-size: 0.85rem;
+  }
+}
+
+/* 320px এবং নিচে (খুব ছোট মোবাইল) */
+@media (max-width: 320px) {
+  .projects-section {
+    padding: 40px 3%;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .project-row {
+    padding: 18px 0;
+    gap: 12px;
+  }
+
+  .project-info h3 {
+    font-size: 1rem;
+  }
+
+  .tech-stack {
+    font-size: 0.7rem;
+    word-spacing: 2px;
+  }
+
+  .read-more {
+    font-size: 0.8rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: 290px;
+    border-radius: 12px;
+  }
+
+  .modal-img-wrapper {
+    height: 180px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .modal-body p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .modal-footer {
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  .modal-tech {
+    font-size: 0.7rem;
+  }
+
+  .view-project-btn {
+    font-size: 0.8rem;
+  }
+
+  .close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+/* টেস্টিমোনিয়াল সেকশন ব্যাকগ্রাউন্ড */
+.testimonials-section {
+  background-color: #0b0d17; /* ডার্ক ব্যাকগ্রাউন্ড */
+  color: #ffffff;
+  padding: 100px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.testimonials-section .section-title {
+  padding-left: 15%;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* মারকিউই কন্টেইনার এবং দুই পাশের ফেইড ইফেক্ট */
+/* মারকিউই কন্টেইনার */
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  /* আপনার রিকোয়েস্ট অনুযায়ী সাইট উইডথ ৮০% করা হলো */
+  width: 80%;               
+  max-width: 1200px;        /* বড় মনিটরে যেন অতিরিক্ত চওড়া না হয়ে যায় */
+  margin: 0 auto;           /* সেকশনটিকে স্ক্রিনের ঠিক মাঝখানে (Center) রাখবে */
+  
+  position: relative;
+  overflow: hidden;         /* দুই পাশে লাইনের বাইরের কার্ডগুলোকে লুকিয়ে রাখবে */
+
+  /* দুই পাশে নিখুঁত ফেইড বা আবছা ইফেক্ট (আপনার দেওয়া মাস্কিং) */
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+}
+
+
+/* প্রতিটি স্লাইডিং লাইন */
+.marquee-row {
+  display: flex;
+  user-select: none;
+  gap: 20px; /* গ্রুপ দুটির মাঝের গ্যাপ */
+  width: max-content;
+  padding: 10px 0;
+}
+
+/* কন্টেন্ট গ্রুপ */
+.marquee-group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px; /* প্রতিটি কার্ডের মাঝের গ্যাপ */
+}
+
+/* নিখুঁত লুপের জন্য নতুন কি-ফ্রেম এনিমেশন */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* দুটি গ্রুপের মাঝের গ্যাপসহ একটি পুরো গ্রুপের সমপরিমাণ দূরত্ব বামে সরবে */
+    transform: translateX(calc(-100% - 20px)); 
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-100% - 20px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* এনিমেশন অ্যাপ্লাই (linear দেওয়ার কারণে কোনো ঝাঁকুনি ছাড়া অনবরত চলতে থাকবে) */
+.scroll-left .marquee-group {
+  animation: scrollLeft 35s linear infinite;
+}
+
+.scroll-right .marquee-group {
+  animation: scrollRight 35s linear infinite;
+}
+
+/* মাউস রাখলে স্ক্রোলিং স্মুথলি পজ হবে */
+.marquee-row:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+/* ইন্ডিভিজুয়াল কার্ড ডিজাইন */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 16px 10px;
+    border-radius: 14px;
+    width: 220px;/* কার্ডের সাইজ আগের চেয়ে একটু ছোট ও স্ট্যান্ডার্ড রাখা হয়েছে */
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+
+.testimonial-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ক্লায়েন্ট প্রোফাইল */
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.client-info img {
+    width: 35px;
+    height: 35px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  background: #1e293b;
+}
+
+.client-info h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.client-info p {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* রিভিউর টেক্সট */
+.review-text {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+
+.contact-section {
+  background-image:linear-gradient(rgba(11, 9, 20, 0.452), rgba(11, 9, 20, 0.548)), 
+    url('try.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  padding-top: 100px;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.contact-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.contact-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.contact-title span {
+  color: #af98b3;
+}
+
+.contact-subtitle {
+  color: #dfdae6;
+  font-size: 0.95rem;
+  margin-bottom: 35px;
+  max-width: 420px;
+}
+
+.saturn-system {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: 0 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.center-planet {
+  width: 161px;
+  height: 161px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 5;
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.25);
+  animation: planetFloat 4s ease-in-out infinite;
+}
+
+.center-planet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes planetFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.saturn-ring-orbit {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1.5px dashed rgb(142 121 151 / 90%);
+  border-radius: 50%;
+  transform: rotateX(65deg) rotateY(-15deg);
+  transform-style: preserve-3d;
+  animation: spinRing 25s linear infinite;
+}
+
+.saturn-system:hover .saturn-ring-orbit {
+  animation-play-state: paused;
+}
+
+@keyframes spinRing {
+  from { transform: rotateX(65deg) rotateY(-15deg) rotateZ(0deg); }
+  to { transform: rotateX(65deg) rotateY(-15deg) rotateZ(360deg); }
+}
+
+.orbit-node {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: calc(50% - 22px);
+  top: calc(50% - 22px);
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.node-icon {
+  width: 100%;
+  height: 100%;
+  background: #111424;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, background 0.3s, border-color 0.3s;
+  transform: rotateX(-65deg) rotateY(15deg);
+  animation: keepIconUpright 25s linear infinite;
+}
+
+.saturn-system:hover .node-icon {
+  animation-play-state: paused;
+}
+
+@keyframes keepIconUpright {
+  from { transform: rotateX(-65deg) rotateY(15deg) rotateZ(0deg); }
+  to { transform: rotateX(-65deg) rotateY(15deg) rotateZ(-360deg); }
+}
+
+.orbit-node:hover .node-icon {
+  transform: scale(1.2) rotateX(-65deg) rotateY(15deg);
+  background: #1e293b;
+  border-color: #f59e0b;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+.orbit-node:nth-child(1) { transform: rotate(0deg) translate(160px); }
+.orbit-node:nth-child(2) { transform: rotate(60deg) translate(160px); }
+.orbit-node:nth-child(3) { transform: rotate(120deg) translate(160px); }
+.orbit-node:nth-child(4) { transform: rotate(180deg) translate(160px); }
+.orbit-node:nth-child(5) { transform: rotate(240deg) translate(160px); }
+.orbit-node:nth-child(6) { transform: rotate(300deg) translate(160px); }
+
+.cosmic-popup {
+  position: fixed;
+  background: rgba(15, 18, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 12px 18px;
+  width: 280px;
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.cosmic-popup.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.popup-header {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.popup-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+#popupValue {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  word-break: break-all;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.copy-action-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.copy-action-btn:hover {
+  background: #ffffff;
+  color: #0b0d17;
+}
+
+.contact-form-box {
+     backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.02);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.05);
+    border-image: initial;
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(153, 141, 163, 0.288);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-24px);
+  font-size: 0.85rem;
+  color: #e7aeff;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-bottom-color: #ac92ac;
+}
+
+.submit-btn {
+  background: #ffffffc7;
+  color: #0b0d17;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+/* ===== মোবাইল রেসপন্সিভ (375px, 320px) ===== */
+
+/* 375px এবং নিচে (ছোট মোবাইল) */
+@media (max-width: 375px) {
+  
+  .contact-section {
+     background-image: linear-gradient(rgba(11, 9, 20, 0.295), rgba(11, 9, 20, 0.301)), 
+    url('try\ -\ Copy.jpg');
+    padding-top: 80px;
+    padding-bottom: 0px !important;
+  }
+
+  .contact-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 10px;
+  }
+
+  .contact-info-box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .saturn-system {
+    width: 280px;
+    height: 280px;
+    margin: 0 0 25px 0;
+  }
+
+  .center-planet {
+    width: 125px;
+    height: 125px;
+  }
+
+  .saturn-ring-orbit {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orbit-node {
+    width: 38px;
+    height: 38px;
+    left: calc(50% - 19px);
+    top: calc(50% - 19px);
+  }
+
+  .node-icon {
+    font-size: 1.3rem;
+  }
+
+  /* 6টি নোডকে ছোট বৃত্তে সাজানো */
+  .orbit-node:nth-child(1) { transform: rotate(0deg) translate(125px); }
+  .orbit-node:nth-child(2) { transform: rotate(60deg) translate(125px); }
+  .orbit-node:nth-child(3) { transform: rotate(120deg) translate(125px); }
+  .orbit-node:nth-child(4) { transform: rotate(180deg) translate(125px); }
+  .orbit-node:nth-child(5) { transform: rotate(240deg) translate(125px); }
+  .orbit-node:nth-child(6) { transform: rotate(300deg) translate(125px); }
+
+  .cosmic-popup {
+    width: 240px;
+    padding: 10px 14px;
+  }
+
+  .popup-header {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+
+  #popupValue {
+    font-size: 0.85rem;
+  }
+
+  .copy-action-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .contact-form-box {
+    padding: 30px 24px;
+    border-radius: 20px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+
+  .input-group label {
+    font-size: 0.95rem;
+    top: 10px;
+  }
+
+  .input-group input:focus ~ label,
+  .input-group input:not(:placeholder-shown) ~ label,
+  .input-group textarea:focus ~ label,
+  .input-group textarea:not(:placeholder-shown) ~ label {
+    transform: translateY(-22px);
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* 320px এবং নিচে (খুব ছোট মোবাইল) */
+@media (max-width: 320px) {
+  .contact-section {
+    background-image: linear-gradient(rgba(11, 9, 20, 0.295), rgba(11, 9, 20, 0.301)), 
+    url('try\ -\ Copy.jpg');
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+
+  .contact-container {
+    width: 92%;
+    gap: 35px;
+    padding: 0 8px;
+  }
+
+  .contact-title {
+    font-size: 1.9rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+  }
+
+  .saturn-system {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px !important;
+  }
+
+  .center-planet {
+    width: 110px;
+    height: 110px;
+  }
+
+  .saturn-ring-orbit {
+    width: 220px;
+    height: 220px;
+  }
+
+  .orbit-node {
+    width: 34px;
+    height: 34px;
+    left: calc(50% - 17px);
+    top: calc(50% - 17px);
+  }
+
+  .node-icon {
+    font-size: 1.2rem;
+  }
+
+  .orbit-node:nth-child(1) { transform: rotate(0deg) translate(110px); }
+  .orbit-node:nth-child(2) { transform: rotate(60deg) translate(110px); }
+  .orbit-node:nth-child(3) { transform: rotate(120deg) translate(110px); }
+  .orbit-node:nth-child(4) { transform: rotate(180deg) translate(110px); }
+  .orbit-node:nth-child(5) { transform: rotate(240deg) translate(110px); }
+  .orbit-node:nth-child(6) { transform: rotate(300deg) translate(110px); }
+
+  .cosmic-popup {
+    width: 220px;
+    padding: 9px 12px;
+  }
+
+  .popup-header {
+    font-size: 0.68rem;
+  }
+
+  #popupValue {
+    font-size: 0.8rem;
+  }
+
+  .copy-action-btn {
+    padding: 4px 9px;
+    font-size: 0.7rem;
+  }
+
+  .contact-form-box {
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+
+  .contact-form {
+    gap: 18px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.9rem;
+    padding: 9px 0;
+  }
+  
+
+}
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-info-box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-title,
+  .contact-subtitle {
+    text-align: center;
+  }
+
+  .saturn-system {
+    margin: 0 auto 30px auto;
+  }
+}
+/* ===== টেবলেট রেসপন্সিভ (768px এবং নিচে) ===== */
+@media (max-width: 768px) {
+  .contact-section {
+    background-image: linear-gradient(rgba(11, 9, 20, 0.295), rgba(11, 9, 20, 0.301)), 
+    url('try\ -\ Copy.jpg');
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .contact-container {
+    width: 85%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 0 auto;
+  }
+
+  .contact-info-box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .saturn-system {
+    width: 320px;
+    height: 320px;
+    margin: 0 0 25px 0;
+  }
+
+  .center-planet {
+    width: 140px;
+    height: 140px;
+  }
+
+  .saturn-ring-orbit {
+    width: 280px;
+    height: 280px;
+  }
+
+  .orbit-node {
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+  }
+
+  .node-icon {
+    font-size: 1.4rem;
+  }
+
+
+  /* টেবলেটে অরবিট রেডিয়াস অ্যাডজাস্ট */
+  .orbit-node:nth-child(1) { transform: rotate(0deg) translate(140px); }
+  .orbit-node:nth-child(2) { transform: rotate(60deg) translate(140px); }
+  .orbit-node:nth-child(3) { transform: rotate(120deg) translate(140px); }
+  .orbit-node:nth-child(4) { transform: rotate(180deg) translate(140px); }
+  .orbit-node:nth-child(5) { transform: rotate(240deg) translate(140px); }
+  .orbit-node:nth-child(6) { transform: rotate(300deg) translate(140px); }
+
+  .cosmic-popup {
+    width: 260px;
+    padding: 11px 16px;
+  }
+
+  .popup-header {
+    font-size: 0.75rem;
+  }
+
+  #popupValue {
+    font-size: 0.9rem;
+  }
+
+  .copy-action-btn {
+    padding: 6px 11px;
+    font-size: 0.8rem;
+  }
+
+  .contact-form-box {
+    padding: 35px 30px;
+    border-radius: 22px;
+  }
+
+  .contact-form {
+    gap: 22px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 1rem;
+    padding: 11px 0;
+  }
+
+  .input-group label {
+    font-size: 1rem;
+    top: 11px;
+  }
+
+  .input-group input:focus ~ label,
+  .input-group input:not(:placeholder-shown) ~ label,
+  .input-group textarea:focus ~ label,
+  .input-group textarea:not(:placeholder-shown) ~ label {
+    transform: translateY(-23px);
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 13px 26px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== মোবাইল রেসপন্সিভ (435px এবং নিচে) ===== */
+@media (max-width: 435px) {
+  .contact-section {
+    background-image: linear-gradient(rgba(11, 9, 20, 0.295), rgba(11, 9, 20, 0.301)), 
+    url('try\ -\ Copy.jpg');
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+
+  .contact-container {
+    width: 90%;
+    gap: 40px;
+    padding: 0 10px;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .saturn-system {
+    width: 280px;
+    height: 280px;
+    margin: 0 0 20px 0;
+  }
+
+  .center-planet {
+    width: 125px;
+    height: 125px;
+  }
+
+  .saturn-ring-orbit {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orbit-node {
+    width: 38px;
+    height: 38px;
+    left: calc(50% - 19px);
+    top: calc(50% - 19px);
+  }
+
+  .node-icon {
+    font-size: 1.3rem;
+  }
+
+  /* 435px এ ছোট অরবিট রেডিয়াস */
+  .orbit-node:nth-child(1) { transform: rotate(0deg) translate(125px); }
+  .orbit-node:nth-child(2) { transform: rotate(60deg) translate(125px); }
+  .orbit-node:nth-child(3) { transform: rotate(120deg) translate(125px); }
+  .orbit-node:nth-child(4) { transform: rotate(180deg) translate(125px); }
+  .orbit-node:nth-child(5) { transform: rotate(240deg) translate(125px); }
+  .orbit-node:nth-child(6) { transform: rotate(300deg) translate(125px); }
+
+  .cosmic-popup {
+    width: 240px;
+    padding: 10px 14px;
+  }
+
+  .popup-header {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+
+  #popupValue {
+    font-size: 0.85rem;
+  }
+
+  .copy-action-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .contact-form-box {
+    padding: 30px 24px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+
+  .input-group label {
+    font-size: 0.95rem;
+    top: 10px;
+  }
+
+  .input-group input:focus ~ label,
+  .input-group input:not(:placeholder-shown) ~ label,
+  .input-group textarea:focus ~ label,
+  .input-group textarea:not(:placeholder-shown) ~ label {
+    transform: translateY(-22px);
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  .saturn-system {
+    margin-bottom: -50px;
+  }
+}
+
+/* ===== খুব ছোট মোবাইল (375px এবং নিচে) ===== */
+@media (max-width: 375px) {
+  .contact-section {
+    padding-top: 65px;
+    padding-bottom: 25px;
+  }
+
+  .contact-container {
+    width: 92%;
+    gap: 35px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .saturn-system {
+    width: 260px;
+    height: 260px;
+  }
+
+  .center-planet {
+    width: 115px;
+    height: 115px;
+  }
+
+  .saturn-ring-orbit {
+    width: 230px;
+    height: 230px;
+  }
+
+  .orbit-node {
+    width: 36px;
+    height: 36px;
+    left: calc(50% - 18px);
+    top: calc(50% - 18px);
+  }
+
+  .node-icon {
+    font-size: 1.2rem;
+  }
+
+  .orbit-node:nth-child(1) { transform: rotate(0deg) translate(115px); }
+  .orbit-node:nth-child(2) { transform: rotate(60deg) translate(115px); }
+  .orbit-node:nth-child(3) { transform: rotate(120deg) translate(115px); }
+  .orbit-node:nth-child(4) { transform: rotate(180deg) translate(115px); }
+  .orbit-node:nth-child(5) { transform: rotate(240deg) translate(115px); }
+  .orbit-node:nth-child(6) { transform: rotate(300deg) translate(115px); }
+
+  .cosmic-popup {
+    width: 220px;
+  }
+
+  .contact-form-box {
+    padding: 26px 20px;
+  }
+
+  .submit-btn {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* =======================================
+   মিনিমালিস্ট স্পেস ফুটার স্টাইল
+========================================== */
+.portfolio-footer {
+  background-color: #0b0d17; /* আপনার ওয়েবসাইটের মূল ডার্ক ব্যাকগ্রাউন্ড */
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-family: system-ui, -apple-system, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* হালকা টপ বর্ডার লাইন */
+}
+
+/* আপনার কন্টাক্ট সেকশনের সাথে অ্যালাইনমেন্ট মিলিয়ে ৮০% উইডথ */
+.footer-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* সাধারণ ফন্ট স্টাইল ও কালার */
+.portfolio-footer a, 
+.portfolio-footer p {
+  color: #64748b; /* ইমেজের মতো মিউটেড গ্রে কালার */
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+/* বাম পাশের পলিসি লিঙ্ক */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left .divider {
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+}
+
+.footer-left a:hover {
+  color: #bb9af7; /* হোভার করলে আপনার থিমের অ্যাস্থেটিক পার্পল হবে */
+}
+
+/* মাঝখানের সোশ্যাল আইকন */
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-center a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.footer-center a:hover {
+  color: #7aa2f7; /* হোভার করলে সাই-ফাই স্কাই ব্লু কালার হবে */
+  transform: translateY(-2px); /* আলতো করে উপরে উঠবে */
+}
+
+/* রেসপন্সিভ ডিজাইন (মোবাইলের জন্য সবকিছু সোজা লাইনে আসবে) */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 90%;
+  }
+}
+/* ===== মোবাইল রেসপন্সিভ (435px, 375px, 320px) ===== */
+
+/* 435px এবং নিচে (সব মোবাইল) */
+@media (max-width: 435px) {
+  .portfolio-footer {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-left .divider {
+    display: none; /* মোবাইলে ডিভাইডার হাইড */
+  }
+
+  .footer-center {
+    gap: 16px;
+  }
+
+  .portfolio-footer a,
+  .portfolio-footer p {
+    font-size: 0.78rem;
+  }
+}
+
+/* 375px এবং নিচে (ছোট মোবাইল) */
+@media (max-width: 375px) {
+  .portfolio-footer {
+    padding-top: 22px;
+    padding-bottom: 30px;
+  }
+
+  .footer-container {
+    width: 92%;
+    gap: 16px;
+  }
+
+  .portfolio-footer a,
+  .portfolio-footer p {
+    font-size: 0.75rem;
+  }
+
+  .footer-center {
+    gap: 14px;
+  }
+
+  .footer-center a:hover {
+    transform: translateY(-1px); /* ছোট মোবাইলে কম মুভমেন্ট */
+  }
+}
+
+/* 320px এবং নিচে (খুব ছোট মোবাইল) */
+@media (max-width: 320px) {
+  .portfolio-footer {
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+
+  .footer-container {
+    width: 94%;
+    gap: 14px;
+  }
+
+  .portfolio-footer a,
+  .portfolio-footer p {
+    font-size: 0.7rem;
+  }
+
+  .footer-left {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-center {
+    gap: 12px;
+  }
+
+  .footer-center a:hover {
+    transform: none; /* 320px এ হোভার এফেক্ট বন্ধ */
+  }
+}

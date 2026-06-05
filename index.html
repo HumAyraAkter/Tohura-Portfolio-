@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tohura | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-Z572RscM6UfS968E+Hn8E32bAeaC+t4I1wL0kQ3wS2wVn9gS1z4+2Jk6E7r6M7UfF5V7V6wFf2w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Tohura</div>
+  
+  <!-- হ্যামবার্গার মেনু ওপেন আইকন (মোবাইলের জন্য) -->
+  <button class="menu-toggle" id="openMenu" aria-label="Open Menu">&#9776;</button>
+
+  <!-- নেভিগেশন লিংকসমূহ -->
+  <nav id="navMenu">
+    <!-- মেনু বন্ধ করার ক্রস আইকন (মোবাইলের জন্য) -->
+    <button class="menu-close" id="closeMenu" aria-label="Close Menu">&times;</button>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+  <!--মেইন হিরো সেকশন -->
+  <main class="hero-section">
+
+    <!--  বাম পাশের টেক্সট কন্টেন্ট -->
+    <div class="hero-text">
+      <h3>Hi, I'm Tohura</h3>
+      <!-- পরিবর্তন করা এই অংশটুকু আপনার হিরো সেকশনে বসিয়ে দিন -->
+<h1>A Developer <br>Dedicated to Crafting <br>
+  <!-- ওয়ার্ডগুলো পরিবর্তনের মূল কন্টেইনার -->
+  <span class="scalable-text" id="changingText">Scalable</span>
+</h1>
+
+      <p>Web Solutions</p>
+    </div>
+
+    <!--  ডান পাশের ভাসমান অ্যাস্ট্রোনট -->
+    <div class="hero-image-container">
+      <!-- এখানে আপনার কেটে নেওয়া ট্রান্সপারেন্ট অ্যাস্ট্রোনট PNG ইমেজটি বসাবেন -->
+      <img src="download__5_-removebg-preview.png" alt="Floating Astronaut" class="astronaut">
+    </div>
+
+  </main>
+
+
+  <section id="about" class="about-bento-section">
+     <h2 class="section-title">About Me</h2>
+    <div class="bento-container">
+      <div class="bento-item item-code">
+        <div class="code-header">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="code-mockup">
+          <p class="text-intro">Hi, I'm Tohura</p>
+          <p class="text-desc">Over the last few years, I developed my frontend and backend dev skills to deliver
+            dynamic and responsive software and web applications.</p>
+        </div>
+      </div>
+
+      <div class="bento-item item-principles">
+        <h3 class="bg-watermark">CODE IS CRAFT</h3>
+        <div class="badge draggable-badge">SRP</div>
+        <div class="badge draggable-badge">SOLID</div>
+        <div class="badge draggable-badge">Design Patterns</div>
+        <div class="badge draggable-badge">Design Principles</div>
+        <div class="badge draggable-badge">GRASP</div>
+        <div class="badge draggable-badge">.NET</div>
+        <div class="badge draggable-badge">C#</div>
+      </div>
+      <div class="bento-item item-timezone">
+        <div class="timezone-text">
+          <h3>Time Zone</h3>
+          <p>I'm based in Earth, and open to remote work worldwide.</p>
+        </div>
+
+        <img src="moon.png" alt="Globe" class="globe-image" />
+      </div>
+
+
+      <div class="bento-item item-cta">
+        <h3>Do you want to start a project together?</h3>
+        <button class="copy-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+          </svg>
+          Copy Email Address
+        </button>
+      </div>
+
+
+      <div class="bento-item item-techstack">
+        <div class="techstack-text">
+          <h3>Tech Stack</h3>
+          <p>I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
+            applications.</p>
+        </div>
+
+        <!-- বিশাল ঘূর্ণায়মান বৃত্তের কন্টেইনার (এক জায়গায় ফিক্সড) -->
+        <div class="orbit-wrapper">
+          <div class="orbit-circle">
+
+            <!-- HTML5 -->
+            <div class="orbit-icon" style="--icon-index: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#E34F26">
+                <path
+                  d="M1.5 22L0 2.45h24L22.5 22 12 24.95zM20.3 4.3H3.7l1.2 13.45 7.1 2 7.1-2zM12 7.15v2.85h3.95l-.35 4-3.6 1-3.6-1-.25-2.85H6.2l.45 5.15 5.35 1.5 5.35-1.5.55-6.35.1-1.3H12z" />
+              </svg>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="orbit-icon" style="--icon-index: 1;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#1572B6">
+                <path
+                  d="M1.5 22L0 2.45h24L22.5 22 12 24.95zM20.3 4.3H3.7l1.2 13.45 7.1 2 7.1-2zM12 7.15V10h3.65l-.35 4-3.3 1-3.3-1-.2-2.3H6.3l.35 4.35 5.35 1.5 5.35-1.5.6-6.7.1-1.2H12z" />
+              </svg>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="orbit-icon" style="--icon-index: 2;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#F7DF1E">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M24 24h-6v-4.5c0-.85-.15-1.5-.75-2.1.6-.15 1.2-.45 1.8-.75.6-.45 1.05-1.05 1.35-1.8.3-.75.45-1.65.45-2.7 0-1.65-.6-3-1.65-3.9.45-1.2.3-2.55-.15-3.75 0 0-1.05-.3-3.3 1.2-1.05-.3-2.1-.45-3.15-.45s-2.1.15-3.15.45c-2.25-1.5-3.3-1.2-3.3-1.2-.45 1.2-.6 2.55-.15 3.75-1.05.9-1.65 2.25-1.65 3.9 0 1.05.15 1.95.45 2.7.3.75.75 1.35 1.35 1.8.6.3 1.2.6 1.8.75-.6.6-.75 1.35-.75 2.1V24H0V0h24v24z"
+                  fill="#111" opacity="0.1" />
+                <path
+                  d="M11.65 17.55c0 1.1-.3 1.95-.9 2.55-.6.6-1.5.9-2.7.9-1.05 0-1.95-.25-2.7-.75v-2.7c.75.6 1.55.9 2.4.9.45 0 .8-.1.1.05-.3.15-.2.15-.45.15-.65 0-1-.35-1-1.05V11.4h2.85v6.15zm9.15.15c0 1.05-.3 1.85-.9 2.4-.6.55-1.45.85-2.55.85-1.2 0-2.3-.4-3.3-1.2l1.65-2.1c.6.45 1.2.68 1.8.68.35 0 .6-.07.75-.22.15-.15.22-.38.22-.68 0-.3-.12-.55-.38-.75-.25-.2-.72-.45-1.42-.75-.98-.4-1.7-.85-2.18-1.35-.48-.5-.72-1.18-.72-2.02 0-.95.3-1.7.9-2.25.6-.55 1.4-.82 2.4-.82.98 0 1.9.3 2.78.9l-1.5 2.1c-.52-.3-.1-.45-1.35-.45-.3 0-.52.05-.68.15-.15.1-.22.25-.22.45 0 .2.1.38.3.52.2.15.65.38 1.35.68 1.05.42 1.8.9 2.25 1.42.45.52.68 1.2.68 2.02z" />
+              </svg>
+            </div>
+
+            <!-- PHP -->
+            <div class="orbit-icon" style="--icon-index: 3;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#777BB4">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.32 12.82c-.44.71-1.09 1.18-1.94 1.18-.5 0-.9-.12-1.2-.38-.3-.25-.49-.62-.57-1.12l-.52-3.12c-.08-.5.03-.92.34-1.25.3-.33.74-.5 1.32-.5.84 0 1.48.45 1.91 1.15.43.71.69 1.68.69 2.92 0 .52-.06 1.03-.18 1.52c-.12.49-.33.92-.61 1.25-.28.33-.61.56-.99.69-.38.13-.77.19-1.17.19-.71 0-1.28-.21-1.7-.62-.42-.41-.63-.98-.63-1.71 0-.6.13-1.18.4-1.72s.67-.98 1.18-1.32c.51-.34 1.12-.51 1.83-.51.52 0 .96.1 1.32.29.36.19.64.47.84.84l.64-3.84h1.72l-1.92 11.52h-1.72l.32-1.92zm-5.74.07c-.42.66-.99 1.11-1.73 1.11-.42 0-.74-.11-.97-.33-.23-.22-.38-.55-.45-1 l-.52-3.12c-.07-.43.02-.79.26-1.07.24-.28.58-.42 1.03-.42.74 0 1.3.41 1.68 1.04.38.63.61 1.51.61 2.63s-.1 1.6-.29 2.12c-.19.52-.45.92-.78 1.21-.33.29-.71.5-1.13.62-.42.12-.85.18-1.28.18-.61 0-1.11-.18-1.49-.55s-.57-.88-.57-1.53c0-.52.12-1.05.35-1.57.23-.52.58-.96 1.03-1.3.45-.34 1-.51 1.63-.51.46 0 .85.09 1.17.26.32.17.57.42.74.74l.43-2.59H5.16l-.26 1.55h1.74l-1.42 8.52H3.5l.26-1.55H2.02l.26-1.55h1.74l.84-5.04H3.14l.26-1.55h1.74L6.68 3.5h1.72l-1.52 9.12c.38-.34.85-.51 1.4-.51.53 0 .98.11 1.36.33.38.22.67.54.87.95l.41-2.43h1.72l-1.92 11.52H9.02l.26-1.55H7.54l.26-1.55h1.74l.32-1.92z" />
+              </svg>
+            </div>
+
+            <!-- WordPress -->
+            <div class="orbit-icon" style="--icon-index: 4;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#21759B">
+                <path
+                  d="M12.158 12.786l-2.698 7.83c2.333.66 4.793.18 6.702-1.275-.246-.037-.478-.172-.613-.393l-3.39-6.162zm-3.033-1.6c.553 0 .943.342 1.4.78.337.322.753.792 1.41.792.463 0 .867-.282 1.135-.615.114-.142.19-.313.238-.485L10.3 3.99c-.77.135-1.512.42-2.185.836l2.36 6.36zm9.324 1.3c.48.966.75 2.057.75 3.214 0 1.2-.29 2.334-.81 3.34l-2.585-7.25c.677-.075 1.314-.047 1.83.275.52.327.643.91.815 1.42zM12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22.125a10.07 10.07 0 0 1-5.714-1.77L9.57 11.08c-.463-.032-.9-.18-1.156-.453-.33-.352-.33-.923-.33-1.42 0-.64.383-1.22.766-1.782.23-.34.464-.69.464-1.077 0-.52-.383-1-.877-1a4.975 4.975 0 0 0-1.13.175A10.106 10.106 0 0 1 12 1.875a10.074 10.074 0 0 1 6.85 2.704c-.167-.02-.345-.03-.518-.03-1.033 0-1.76.634-2.52 1.353-.615.584-1.26 1.252-2.518 1.252-1.127 0-1.796-.633-2.42-1.23-.53-.505-1.026-.98-1.848-.98-.315 0-.64.073-.956.222l4.89 13.97 3.328-9.76c.414-.075.81-.137 1.156-.137.93 0 1.636.564 1.636 1.412 0 .548-.28 1.073-.553 1.574-.35.632-.732 1.32-.732 2.19 0 .428.1.847.28 1.217l2.84 8.275a10.05 10.05 0 0 1-6.885 2.222z" />
+              </svg>
+            </div>
+
+            <!-- React -->
+            <div class="orbit-icon" style="--icon-index: 5;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#61DAFB">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.66 1.34 3 3 3h1v.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H10v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 1.84-.63 3.54-1.1 4.93z" />
+              </svg>
+            </div>
+
+            <!-- Node.js -->
+            <div class="orbit-icon" style="--icon-index: 6;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#339933">
+                <path
+                  d="M12 2L2 7.5v11L12 24l10-5.5v-11L12 2zm0 3.25l7.5 4.12v8.25L12 21.75l-7.5-4.13v-8.25L12 5.25z" />
+              </svg>
+            </div>
+
+            <!-- Python -->
+            <div class="orbit-icon" style="--icon-index: 7;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#3776AB">
+                <path
+                  d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm.75-5.5h-1.5V7h1.5v5z" />
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+
+
+
+  <section id="work" class="projects-section">
+    <h2 class="section-title">My Selected Projects</h2>
+
+    <div class="projects-list">
+      <!-- প্রজেক্ট ১ -->
+      <div class="project-row" data-img="download (10).jpg" data-title="E-commerce Platform"
+        data-desc="A lightweight C++ game engine designed for 2D and 3D game development. Built a powerful rendering engine using OpenGL and C++. Developed a physics engine with collision detection."
+        data-tech="C# .Net EF Core TailwindCSS" data-link="https://github.com">
+        <div class="project-info">
+          <h3>E-commerce Platform</h3>
+          <p class="tech-stack">C# .Net EF Core TailwindCSS</p>
+        </div>
+        <a href="#" class="read-more">Read More <span class="arrow">→</span></a>
+      </div>
+
+      <!-- প্রজেক্ট ২ -->
+      <div class="project-row" data-img="download (11).jpg" data-title="Authentication & Authorization System"
+        data-desc="Secure user authentication system using Auth0 and React. Features include JWT validation, role-based access control, and a lightweight SQLite database for session tracking."
+        data-tech="Auth0 React SQLite TailwindCSS" data-link="https://github.com">
+        <div class="project-info">
+          <h3>Authentication & Authorization System</h3>
+          <p class="tech-stack">Auth0 React SQLite TailwindCSS</p>
+        </div>
+        <a href="#" class="read-more">Read More <span class="arrow">→</span></a>
+      </div>
+
+      <!-- প্রজেক্ট ৩ -->
+      <div class="project-row" data-img="download (12).jpg" data-title="Blazor Web App"
+        data-desc="Interactive enterprise dashboard application built entirely with Blazor WebAssembly and .NET Core. Fast, responsive, and styled with TailwindCSS."
+        data-tech="Blazor .NET Core SQLite TailwindCSS" data-link="https://github.com">
+        <div class="project-info">
+          <h3>Blazor Web App</h3>
+          <p class="tech-stack">Blazor .NET Core SQLite TailwindCSS</p>
+        </div>
+        <a href="#" class="read-more">Read More <span class="arrow">→</span></a>
+      </div>
+
+      <!-- প্রজেক্ট ৪ -->
+      <div class="project-row" data-img="download (9).jpg" data-title="C++ Game Engine"
+        data-desc="A lightweight C++ game engine designed for 2D and 3D game development. Built a powerful rendering engine using OpenGL and C++. Optimized performance with multi-threading and efficient memory management."
+        data-tech="C++ C# Git Microsoft" data-link="https://github.com">
+        <div class="project-info">
+          <h3>C++ Game Engine</h3>
+          <p class="tech-stack">C++ C# Git Microsoft</p>
+        </div>
+        <a href="#" class="read-more">Read More <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- মাউস হোভার করলে যে গ্লোবাল প্রিভিউ বক্সটি ভেসে উঠবে -->
+    <div class="project-preview-box" id="projectPreview">
+      <img src="" alt="Project Preview" id="previewImg">
+    </div>
+
+    <!-- ক্লিক করলে যে ডিটেইলস মোডাল পপআপ ভেসে উঠবে (ইমেজের মতো) -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">✕</button>
+
+        <!-- ইমেজের প্রিভিউ স্ক্রিনশট -->
+        <div class="modal-img-wrapper">
+          <img src="" alt="Project Image" id="modalImg">
+        </div>
+
+        <!-- বিস্তারিত টেক্সট এরিয়া -->
+        <div class="modal-body">
+          <h3 id="modalTitle">C++ Game Engine</h3>
+          <p id="modalDesc">A lightweight C++ game engine designed for 2D and 3D game development...</p>
+
+          <div class="modal-footer">
+            <!-- টেক স্ট্যাকের নাম/লিস্ট -->
+            <div class="modal-tech" id="modalTech">C++ • Git • Microsoft</div>
+            <!-- প্রজেক্ট দেখার বাটন -->
+            <a href="#" target="_blank" class="view-project-btn" id="modalLink">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="testimonials-section">
+    <h2 class="section-title">Hear From My Clients</h2>
+
+    <div class="marquee-container">
+
+      <!-- লাইন ১: বাম থেকে ডানে যাবে (Scroll Left) -->
+      <div class="marquee-row scroll-left">
+        <!-- আসল গ্রুপ (৬টি কার্ড) -->
+        <div class="marquee-group">
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Alice</h4>
+                <p>@alice</p>
+              </div>
+            </div>
+            <p class="review-text">This is hands down the best thing I've experienced. Highly recommend!</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          
+          
+          
+        </div>
+
+        <!-- লুপ নিরবচ্ছিন্ন রাখার জন্য ডুপ্লিকেট গ্রুপ (হুবহু উপরের ৬টি কার্ড) -->
+        <div class="marquee-group" aria-hidden="true">
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="https://unsplash.com" alt="Client">
+              <div>
+                <h4>Alice</h4>
+                <p>@alice</p>
+              </div>
+            </div>
+            <p class="review-text">This is hands down the best thing I've experienced. Highly recommend!</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Jack</h4>
+                <p>@jack</p>
+              </div>
+            </div>
+            <p class="review-text">I've never seen anything like this before. It's amazing. I love it.</p>
+          </div>
+          
+          
+          
+            
+        </div>
+      </div>
+
+      <!-- লাইন ২: ডান থেকে বামে যাবে (Scroll Right) -->
+      <div class="marquee-row scroll-right">
+        <!-- আসল গ্রুপ (৬টি কার্ড) -->
+        <div class="marquee-group">
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Dave</h4>
+                <p>@dave</p>
+              </div>
+            </div>
+            <p class="review-text">Simply breathtaking. The best decision I've made in a while.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          
+        </div>
+
+        <!-- লুপ নিরবচ্ছিন্ন রাখার জন্য ডুপ্লিকেট গ্রুপ (হুবху উপরের ৬টি কার্ড) -->
+        <div class="marquee-group" aria-hidden="true">
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Dave</h4>
+                <p>@dave</p>
+              </div>
+            </div>
+            <p class="review-text">Simply breathtaking. The best decision I've made in a while.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="spider spider.jpg" alt="Client">
+              <div>
+                <h4>Eve</h4>
+                <p>@eve</p>
+              </div>
+            </div>
+            <p class="review-text">So glad I found this. It has changed the game for me.</p>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+      <!-- বাম পাশ: কসমিক কন্টাক্ট অরবিট (চাঁদ ও ঘূর্ণায়মান সোশ্যাল আইকন) -->
+      <div class="contact-info-box">
+    
+                  <h2 class="contact-title">Let's work <br><span>together.</span></h2>
+        <p class="contact-subtitle">Hover over the orbiting nodes to connect or copy my details.</p>
+        
+
+        <!-- অরবিট সিস্টেম কন্টেইনার -->
+        <div class="saturn-system">
+          <!-- মাঝখানের মূল গ্রহ (শনির মতো) -->
+          <div class="center-planet">
+            <!-- এখানে আপনার পছন্দের শনি বা চাঁদের ইমেজটি বসাবেন -->
+            <img src="Moon_Purple-removebg-preview.png" alt="Planet">
+          </div>
+
+          <!-- শনির বলয়ের মতো বাঁকা কক্ষপথ -->
+          <div class="saturn-ring-orbit">
+
+            <!-- ১. ম্যাপ (Location) -->
+            <!-- ১. লোকেশন -->
+<div class="orbit-node" data-type="Location" data-value="Dhaka, Bangladesh">
+  <div class="node-icon"><i class="fa-solid fa-location-dot" style="color: #ff0000;"></i></div>
+</div>
+
+<!-- ২. ফেসবুক -->
+<div class="orbit-node" data-type="Facebook" data-value="https://facebook.com" data-link="true">
+  <div class="node-icon"><i class="fa-brands fa-facebook-f" style="color: #1877F2;"></i></div>
+</div>
+
+<!-- ৩. ইনস্টাগ্রাম -->
+<div class="orbit-node" data-type="Instagram" data-value="https://instagram.com" data-link="true">
+  <div class="node-icon"><i class="fa-brands fa-instagram" style="color: #ffffff;  background: radial-gradient(circle farthest-corner at 28% 100%, #feca57 0%, #f22f17 35%, #e1306c 45%, #b832b3 60%, #405de6 90%); border-radius: 50% 40% ;  "></i></div>
+</div>
+
+<!-- ৪. ইমেইল -->
+<div class="orbit-node" data-type="Email" data-value="your.email@example.com" data-copy="true">
+  <div class="node-icon"><i class="fa-solid fa-envelope" style="color: #FBBC05; "></i></div>
+</div>
+
+<!-- ৫. গিটহাব -->
+<div class="orbit-node" data-type="GitHub" data-value="https://github.com" data-link="true">
+  <div class="node-icon"><i class="fa-brands fa-github" style="color: #ffffff;"></i></div>
+</div>
+
+<!-- ৬. ফোন নম্বর -->
+<div class="orbit-node" data-type="Phone" data-value="+88017XXXXXXXX" data-copy="true">
+  <div class="node-icon"><i class="fa-solid fa-phone" style="color: #25D366;"></i></div>
+</div> 
+
+
+          </div>
+        </div>
+
+
+        <!-- ডাইনামিক পপআপ বক্স (আইকনে হোভার করলে এটি ভেসে উঠবে) -->
+        <div class="cosmic-popup" id="cosmicPopup">
+          <div class="popup-header" id="popupType">Contact Info</div>
+          <div class="popup-body">
+            <span id="popupValue">Hover an icon</span>
+            <button class="copy-action-btn" id="popupActionBtn">Copy</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ডান পাশ: কন্টাক্ট ফর্ম (আগের মতোই থাকবে) -->
+      <div class="contact-form-box">
+        <form action="#" method="POST" class="contact-form">
+          <div class="input-group">
+            <input type="text" id="name" required placeholder=" ">
+            <label for="name">Your Name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" required placeholder=" ">
+            <label for="email">Email Address</label>
+          </div>
+          <div class="input-group">
+            <textarea id="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">Tell me about your project</label>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+    <footer class="portfolio-footer">
+  <div class="footer-container">
+    
+    <!-- বাম পাশ: পলিসি লিঙ্কসমূহ -->
+    <div class="footer-left">
+      <a href="#">Terms & Conditions</a>
+      <span class="divider">|</span>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <!-- মাঝখান: সোশ্যাল আইকনসমূহ -->
+    <div class="footer-center">
+      <!-- হোয়াটসঅ্যাপ -->
+      <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      </a>
+      <!-- লিঙ্কডইন -->
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      <!-- ইনস্টাগ্রাম -->
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </a>
+    </div>
+
+    <!-- ডান পাশ: কপিরাইট টেক্সট -->
+    <div class="footer-right">
+      <p>&copy; 2026 Ali. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+  </section>
+
+  <script>
+
+    //navbar er 
+const openMenuBtn = document.getElementById('openMenu');
+  const closeMenuBtn = document.getElementById('closeMenu');
+  const navMenu = document.getElementById('navMenu');
+
+  // হ্যামবার্গার আইকনে ক্লিক করলে মেনু বাম থেকে আসবে
+  openMenuBtn.addEventListener('click', () => {
+    navMenu.classList.add('active');
+  });
+
+  // ক্রস আইকনে ক্লিক করলে মেনু আবার বামে লুকিয়ে যাবে
+  closeMenuBtn.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+
+  // মেনুর কোনো লিংকে ক্লিক করলেও যেন মেনু বন্ধ হয়ে যায় (ঐচ্ছিক)
+  const navLinks = document.querySelectorAll('#navMenu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.getElementById("changingText");
+  
+  const words = ["Scalable", "Dynamic", "Modern", "Creative", "Blazing Fast"];
+  let currentIndex = 0;
+
+  // প্রতি ২ সেকেন্ড (২০০০ মিলিসেকেন্ড) পর পর লুপটি চলবে
+  setInterval(() => {
+    if (!textElement) return;
+
+    // ১. প্রথমে বর্তমান শব্দটিকে ০.৫ সেকেন্ড ধরে ফেইড-আউট করা হবে
+    textElement.classList.add("fade-out");
+
+    // ২. ঠিক ৫০০ মিলিসেকেন্ড পর (যখন লেখাটি পুরোপুরি অদৃশ্য), তখন লেখা ও কালার চেঞ্জ হবে
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % words.length;
+      textElement.textContent = words[currentIndex];
+
+      // কালার পরিবর্তন লজিক
+      if (currentIndex % 2 === 0) {
+        textElement.style.color = "#bb9af7"; // পার্পল
+        textElement.style.textShadow = "0 0 20px rgba(187, 154, 247, 0.5)";
+      } else {
+        textElement.style.color = "#7aa2f7"; // ব্লু
+        textElement.style.textShadow = "0 0 20px rgba(122, 162, 247, 0.5)";
+      }
+
+      // ৩. নতুন লেখাটি নিচ থেকে আসার জন্য প্রস্তুত করা (fade-out সরিয়ে fade-in করা)
+      textElement.classList.remove("fade-out");
+      textElement.classList.add("fade-in");
+
+      // ৪. সামান্য ১টি ফ্রেমের গ্যাপ দিয়ে 'fade-in' ক্লাসটি সরালে সিএসএস এটিকে স্মুথলি রিভিল করবে
+      setTimeout(() => {
+        textElement.classList.remove("fade-in");
+      }, 50); // Fluid Flow নিশ্চিত করার ট্রিক
+
+    }, 500); // সিএসএস ট্রানজিশন টাইমিংয়ের সাথে ১০০% ম্যাচড
+
+  }, 2000); 
+});
+
+
+const badges = document.querySelectorAll('.draggable-badge');
+const container = document.querySelector('.item-principles');
+
+// পেজ লোড হলে ব্যাজগুলোকে এলোমেলো করা
+window.addEventListener('DOMContentLoaded', () => {
+  badges.forEach(badge => {
+    // এলোমেলো পজিশন হিসাব (কন্টেইনারের সীমানার ভেতরে)
+    const maxLeft = container.clientWidth - badge.clientWidth - 30;
+    const maxTop = container.clientHeight - badge.clientHeight - 30;
+
+    const randomLeft = Math.max(15, Math.floor(Math.random() * maxLeft));
+    const randomTop = Math.max(15, Math.floor(Math.random() * maxTop));
+
+    // -৩০ থেকে +৩০ ডিগ্রির মধ্যে এলোমেলো রোটেশন (বাঁকা করা)
+    const randomAngle = Math.floor(Math.random() * 60) - 30;
+
+    badge.style.left = `${randomLeft}px`;
+    badge.style.top = `${randomTop}px`;
+    badge.style.transform = `rotate(${randomAngle}deg)`;
+
+    // ফিজিক্স ডাটা সেটআপ
+    setupPhysics(badge, randomLeft, randomTop, randomAngle);
+  });
+});
+
+function setupPhysics(badge, startX, startY, startAngle) {
+  let isDragging = false;
+  let x = startX;
+  let y = startY;
+  let angle = startAngle;
+  let vx = 0, vy = 0;
+  let lastX, lastY;
+  let rafId;
+
+  function updatePhysics() {
+    if (!isDragging) {
+      vx *= 0.95;
+      vy *= 0.95;
+      x += vx;
+      y += vy;
+
+      const maxLeft = container.clientWidth - badge.clientWidth - 15;
+      const maxTop = container.clientHeight - badge.clientHeight - 15;
+
+      // বাউন্স ও দেয়াল ডিটেকশন
+      if (x < 15) { x = 15; vx *= -0.6; }
+      else if (x > maxLeft) { x = maxLeft; vx *= -0.6; }
+
+      if (y < 15) { y = 15; vy *= -0.6; }
+      else if (y > maxTop) { y = maxTop; vy *= -0.6; }
+
+      badge.style.left = `${x}px`;
+      badge.style.top = `${y}px`;
+    }
+
+    if (Math.abs(vx) > 0.05 || Math.abs(vy) > 0.05 || isDragging) {
+      rafId = requestAnimationFrame(updatePhysics);
+    }
+  }
+
+  // ড্র্যাগ শুরু করার কমন ফাংশন (Mouse & Touch)
+  function onStart(e) {
+    isDragging = true;
+    badge.style.cursor = 'grabbing';
+    badge.style.transform = 'rotate(0deg)';
+
+    // মাউস ক্লিক অথবা টাচ পয়েন্টের কোঅর্ডিনেট নেওয়া
+    const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+    const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+
+    lastX = clientX;
+    lastY = clientY;
+
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(updatePhysics);
+  }
+
+  // ড্র্যাগ করে সরানোর কমন ফাংশন (Mouse & Touch)
+  function onMove(e) {
+    if (!isDragging) return;
+
+    // মোবাইলে ড্র্যাগ করার সময় ব্যাকগ্রাউন্ড পেজ যেন স্ক্রল না হয়ে যায়
+    if (e.type === 'touchmove') e.preventDefault();
+
+    const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+    const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+    vx = clientX - lastX;
+    vy = clientY - lastY;
+    x += vx;
+    y += vy;
+
+    lastX = clientX;
+    lastY = clientY;
+
+    const maxLeft = container.clientWidth - badge.clientWidth - 15;
+    const maxTop = container.clientHeight - badge.clientHeight - 15;
+
+    if (x < 15) x = 15;
+    if (x > maxLeft) x = maxLeft;
+    if (y < 15) y = 15;
+    if (y > maxTop) y = maxTop;
+
+    badge.style.left = `${x}px`;
+    badge.style.top = `${y}px`;
+  }
+
+  // ড্র্যাগ শেষ করার কমন ফাংশন (Mouse & Touch)
+  function onEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    badge.style.cursor = 'grab';
+
+    const releaseAngle = Math.min(Math.max(vx * 2, -25), 25);
+    badge.style.transform = `rotate(${releaseAngle}deg)`;
+  }
+
+  // 🖱️ ডেস্কটপ ইভেন্ট লিসেনার
+  badge.addEventListener('mousedown', onStart);
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('mouseup', onEnd);
+
+  // 📱 মোবাইল ও ট্যাবলেট ইভেন্ট লিসেনার (নতুন যুক্ত করা হয়েছে)
+  badge.addEventListener('touchstart', onStart, { passive: true });
+  document.addEventListener('touchmove', onMove, { passive: false }); // preventDefault-এর জন্য passive: false জরুরি
+  document.addEventListener('touchend', onEnd);
+  document.addEventListener('touchcancel', onEnd); // হুট করে টাচ কেটে গেলে সেফটির জন্য
+}
+// copy email dile copy hoya
+document.querySelector('.copy-btn').addEventListener('click', function() {
+  const email = "mimtohura98@gamil.com";
+  
+  // আধুনিক ব্রাউজারে ক্লিপবোর্ডে কপি করার নিয়ম
+  navigator.clipboard.writeText(email).then(() => {
+    // কপি সফল হলে বাটনের ভেতরের টেক্সট পরিবর্তন করা
+    const btn = this;
+    const originalText = btn.innerHTML;
+    
+    // নতুন টেক্সট ও আইকন সেট করা (কপি হওয়ার পর)
+    btn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      Copied!
+    `;
+    btn.style.pointerEvents = 'none'; // ডাবল ক্লিক লক করা
+    
+    // ২ সেকেন্ড পর আবার আগের অবস্থায় ফিরিয়ে আনা
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.pointerEvents = 'auto';
+    }, 2000);
+    
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
+  });
+});
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const projectRows = document.querySelectorAll(".project-row");
+      const previewBox = document.getElementById("projectPreview");
+      const previewImg = document.getElementById("previewImg");
+
+      // মোডাল এলিমেন্টস
+      const modal = document.getElementById("projectModal");
+      const modalImg = document.getElementById("modalImg");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDesc = document.getElementById("modalDesc");
+      const modalTech = document.getElementById("modalTech");
+      const modalLink = document.getElementById("modalLink");
+      const closeModal = document.getElementById("closeModal");
+      const modalBackdrop = document.getElementById("modalBackdrop");
+
+      projectRows.forEach((row) => {
+        // ১. হোভার ইফেক্ট (প্রিভিউ বক্স দেখানোর জন্য)
+        row.addEventListener("mouseenter", () => {
+          const imgUrl = row.getAttribute("data-img");
+          previewImg.src = imgUrl;
+          previewBox.classList.add("active");
+        });
+
+        row.addEventListener("mousemove", (e) => {
+          const x = e.clientX + 20;
+          const y = e.clientY - 90;
+          previewBox.style.left = `${x}px`;
+          previewBox.style.top = `${y}px`;
+        });
+
+        row.addEventListener("mouseleave", () => {
+          previewBox.classList.remove("active");
+        });
+
+        // ২. ক্লিক ইফেক্ট (ইমেজের মতো পপআপ উইন্ডো খোলার জন্য)
+        row.addEventListener("click", (e) => {
+          e.preventDefault(); // লিঙ্কের ডিফল্ট বিহেভিয়ার বন্ধ করতে
+
+          // ডাটা এট্রিবিউট থেকে প্রজেক্টের সব ডিটেইলস নিয়ে আসা
+          const imgUrl = row.getAttribute("data-img");
+          const title = row.getAttribute("data-title");
+          const desc = row.getAttribute("data-desc");
+          const tech = row.getAttribute("data-tech");
+          const link = row.getAttribute("data-link");
+
+          // মোডালে ডাটাগুলো সেট করা
+          modalImg.src = imgUrl;
+          modalTitle.textContent = title;
+          modalDesc.textContent = desc;
+          modalTech.textContent = tech.split(' ').join(' • '); // স্পেস এর জায়গায় ডট ডট স্টাইল
+          modalLink.href = link;
+
+          // প্রিভিউ বক্স হাইড করে মোডাল ওপেন করা
+          previewBox.classList.remove("active");
+          modal.classList.add("open");
+        });
+      });
+
+      // মোডাল বন্ধ করার ফাংশন
+      const closeProjectModal = () => {
+        modal.classList.remove("open");
+      };
+
+      closeModal.addEventListener("click", closeProjectModal);
+      modalBackdrop.addEventListener("click", closeProjectModal);
+    });
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // ১. ব্রাউজারের ফর্ম রিসাবমিশন পপআপ চিরতরে বন্ধ করার মাস্টার ট্রিক
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+
+  // অরবিট এলিমেন্টসমূহ
+  const orbitNodes = document.querySelectorAll(".orbit-node");
+  const popup = document.getElementById("cosmicPopup");
+  const popupType = document.getElementById("popupType");
+  const popupValue = document.getElementById("popupValue");
+  const popupActionBtn = document.getElementById("popupActionBtn");
+
+  // কন্টাক্ট ফর্ম এলিমেন্টসমূহ (অ্যানিমেশনের জন্য)
+  const contactForm = document.querySelector(".contact-form");
+  const formSubmitBtn = document.querySelector(".submit-btn");
+  const statusMessage = document.getElementById("statusMessage");
+  const formSpinner = document.getElementById("formSpinner");
+  const statusText = document.getElementById("statusText");
+
+  let currentTargetValue = "";
+
+  // ২. অরবিট নোড হোভার হ্যান্ডলার
+  orbitNodes.forEach((node) => {
+    node.addEventListener("mouseenter", (e) => {
+      e.stopPropagation();
+
+      const type = node.getAttribute("data-type");
+      const value = node.getAttribute("data-value");
+      const isLink = node.getAttribute("data-link");
+
+      currentTargetValue = value;
+
+      popupType.textContent = type;
+      popupValue.textContent = value;
+
+      if (isLink === "true") {
+        popupActionBtn.textContent = "Open";
+      } else {
+        popupActionBtn.textContent = "Copy";
+      }
+
+      // মাউসের পজিশন অনুযায়ী পপআপ বক্সটি ডান পাশে সেট করা (+২০ পিক্সেল অফসেট)
+      const x = e.clientX + 20;
+      const y = e.clientY - 40;
+
+      popup.style.left = `${x}px`;
+      popup.style.top = `${y}px`;
+
+      // পপআপ একটিভ হবে এবং মাউস সরালেও এটি স্ক্রিনে আটকে থাকবে
+      popup.classList.add("active");
+    });
+  });
+
+  // ৩. কপি অথবা লিঙ্ক ওপেন করার অ্যাকশন বাটন হ্যান্ডলার
+  popupActionBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // বাইরে ক্লিকের ইভেন্ট যেন ট্রিগার না হয়
+    if (!currentTargetValue) return;
+
+    if (popupActionBtn.textContent === "Open") {
+      window.open(currentTargetValue, "_blank");
+      popup.classList.remove("active"); 
+    } else {
+      navigator.clipboard.writeText(currentTargetValue).then(() => {
+        const originalText = popupActionBtn.textContent;
+        popupActionBtn.textContent = "Copied! ✓";
+        popupActionBtn.style.background = "#4ade80";
+        popupActionBtn.style.color = "#0b0d17";
+
+        // কপি হওয়ার ১ সেকেন্ড পর পপআপটি নিজে থেকেই বন্ধ হয়ে যাবে
+        setTimeout(() => {
+          popup.classList.remove("active");
+          setTimeout(() => {
+            popupActionBtn.textContent = originalText;
+            popupActionBtn.style.background = "";
+            popupActionBtn.style.color = "";
+          }, 300);
+        }, 1000);
+      });
+    }
+  });
+
+  // ৪. ক্লিক আউটসাইড টু ক্লোজ
+  document.addEventListener("click", (e) => {
+    const isClickInsidePopup = popup.contains(e.target);
+    let isClickOnNode = false;
+
+    orbitNodes.forEach(node => {
+      if (node.contains(e.target)) isClickOnNode = true;
+    });
+
+    if (!isClickInsidePopup && !isClickOnNode) {
+      popup.classList.remove("active");
+    }
+  });
+
+  // ৫. কন্টাক্ট ফর্ম সাবমিশন এবং লোডিং/সাকসেস অ্যানিমেশন হ্যান্ডলার
+  // (এটি ব্রাউজারের ডিফল্ট পেজ রিফ্রেশকে একদম আটকে দেবে)
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault(); // ব্রাউজারের ফর্ম সাবমিট জেনারেটেড রিফ্রেশ বন্ধ করার আসল লাইন
+      e.stopPropagation();
+
+      // বাটন লক ও লোডিং অ্যানিমেশন চালু
+      if (formSubmitBtn) {
+        formSubmitBtn.style.opacity = "0.5";
+        formSubmitBtn.style.pointerEvents = "none";
+      }
+      
+      if (statusMessage) {
+        statusMessage.className = "status-message show";
+        if (formSpinner) formSpinner.style.display = "block";
+        if (statusText) statusText.textContent = "Sending your message...";
+      }
+
+      // ২ সেকেন্ডের একটি ডামি সার্ভার রেসপন্স টাইম অ্যানিমেশন
+      setTimeout(() => {
+        if (formSpinner) formSpinner.style.display = "none";
+        
+        if (statusMessage) {
+          statusMessage.classList.add("success");
+          if (statusText) {
+            statusText.innerHTML = `
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align: middle; margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Message sent successfully!
+            `;
+          }
+        }
+
+        // ইনপুট ফিল্ডগুলো খালি করে দেওয়া
+        contactForm.reset();
+
+        // ৫ সেকেন্ড পর সাকসেস মেসেজ হাইড করে বাটন নরমাল করা
+        setTimeout(() => {
+          if (statusMessage) statusMessage.className = "status-message";
+          if (formSubmitBtn) {
+            formSubmitBtn.style.opacity = "1";
+            formSubmitBtn.style.pointerEvents = "auto";
+          }
+        }, 5000);
+
+      }, 2000); 
+    });
+  }
+});
+// পপআপ ইলিমেন্ট সিলেক্ট
+const popup = document.querySelector('.cosmic-popup');
+
+// সব orbit-node এ ক্লিক ইভেন্ট লিসেনার
+const nodes = document.querySelectorAll('.orbit-node');
+
+nodes.forEach(node => {
+  node.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // এই নোডের ডেটা পেতে (example: email, phone, etc.)
+    const dataIndex = node.getAttribute('data-index');
+    const dataValue = node.getAttribute('data-value'); // আপনার HTML এ data-value থাকতে হবে
+    
+    // পপআপ কন্টেন্ট সেট করুন
+    document.querySelector('.popup-header').textContent = node.getAttribute('data-type') || 'CONTACT';
+    document.getElementById('popupValue').textContent = dataValue || '';
+    
+    // মোবাইলে কার্সরের ঠিক নিচে পপআপ পজিশন করুন
+    const rect = node.getBoundingClientRect();
+    const popupWidth = 240; // আপনার পপআপের ওয়াইডথ
+    const popupHeight = popup.offsetHeight;
+    
+    // স্ক্রিনের ডানপ্রান্ত চেক করুন
+    let leftPosition = rect.left;
+    if (leftPosition + popupWidth > window.innerWidth) {
+      leftPosition = window.innerWidth - popupWidth - 10; // ডানপ্রান্তে ম্যাrgin
+    }
+    if (leftPosition < 10) {
+      leftPosition = 10; // বামপ্রান্তে মার্জিন
+    }
+    
+    // স্ক্রিনের নিচপ্রান্ত চেক করুন
+    let topPosition = rect.bottom + 10;
+    if (topPosition + popupHeight > window.innerHeight) {
+      topPosition = rect.top - popupHeight - 10; // উপরে show করবে
+    }
+    
+    // পপআপ পজিশন সেট করুন
+    popup.style.left = `${leftPosition}px`;
+    popup.style.top = `${topPosition}px`;
+    
+    // পপআপ aktif করুন
+    popup.classList.add('active');
+  });
+});
+
+// বাইরে ক্লিক করলে পপআপ বন্ধ হবে
+document.addEventListener('click', (e) => {
+  if (!popup.contains(e.target) && !e.target.closest('.orbit-node')) {
+    popup.classList.remove('active');
+  }
+});
+
+// কপি বাটন ক্লিক
+document.querySelector('.copy-action-btn').addEventListener('click', () => {
+  const value = document.getElementById('popupValue').textContent;
+  navigator.clipboard.writeText(value).then(() => {
+    const btn = document.querySelector('.copy-action-btn');
+    const originalText = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => {
+      btn.textContent = originalText;
+    }, 1500);
+  });
+});
+
+  </script>
+
+
+
+</body>
+
+</html>
